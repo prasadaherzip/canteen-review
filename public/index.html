@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">Canteen<span>Review</span></div>
+        <div class="nav-links">
+            <a href="#snacks">Snacks</a>
+            <a href="#drinks">Drinks</a>
+            <a href="#meals">Meals</a>
+            <a href="#refreshments">Refreshments</a>
+        </div>
+        <button id="admin-add-btn" class="btn-primary">Admin: Add Item</button>
+        <button id="logout-btn" class="btn-secondary">Logout</button>
+    </nav>
+
+    <main>
+        <header class="hero">
+            <h1>Delicious Food, <br> Honest Reviews.</h1>
+            <p>Join the community and share your thoughts on the canteen menu.</p>
+        </header>
+
+        <section id="snacks" class="category-section">
+            <h2>Snacks</h2>
+            <div class="items-grid" id="snacks-grid">
+                <!-- Items will be injected here -->
+            </div>
+        </section>
+
+        <section id="drinks" class="category-section">
+            <h2>Drinks</h2>
+            <div class="items-grid" id="drinks-grid">
+                <!-- Items will be injected here -->
+            </div>
+        </section>
+
+        <section id="meals" class="category-section">
+            <h2>Meals</h2>
+            <div class="items-grid" id="meals-grid">
+                <!-- Items will be injected here -->
+            </div>
+        </section>
+
+        <section id="refreshments" class="category-section">
+            <h2>Refreshments</h2>
+            <div class="items-grid" id="refreshments-grid">
+                <!-- Items will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Admin Modal -->
+    <div id="admin-modal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <h2>Add New Item</h2>
+            <form id="add-item-form">
+                <input type="text" id="item-name" placeholder="Item Name" required>
+                <select id="item-category">
+                    <option value="snacks">Snacks</option>
+                    <option value="drinks">Drinks</option>
+                    <option value="meals">Meals</option>
+                    <option value="refreshments">Refreshments</option>
+                </select>
+                <input type="text" id="item-desc" placeholder="Description" required>
+                <input type="text" id="item-image" placeholder="Image URL" required>
+                <button type="submit" class="btn-primary">Add Item</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
